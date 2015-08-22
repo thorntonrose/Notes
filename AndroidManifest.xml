@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.rosesquared.notes"
+      android:versionCode="5"
+      android:versionName="1.4">
+   <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="15"/>
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+   <application
+         android:label="@string/app_name"
+         android:description="@string/app_name"
+         android:icon="@drawable/launcher"
+         android:theme="@android:style/Theme.Holo.Light"
+         android:allowBackup="true">
+      <!-- Notes -->
+      <activity android:name="Notes" android:label="@string/app_name">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+             <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+      </activity>
+
+      <!-- Editor -->
+      <activity
+         android:name="Editor"
+         android:configChanges="orientation|screenSize"
+         android:label="@string/app_name"/>
+   </application>
+</manifest>
